@@ -1,0 +1,21 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: notifications
+  labels:
+    strimzi.io/cluster: nodejs-cluster
+spec:
+  partitions: 1
+  replicas: 1
+
+---
+
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: orders
+  labels:
+    strimzi.io/cluster: nodejs-cluster
+spec:
+  partitions: 1
+  replicas: 1
